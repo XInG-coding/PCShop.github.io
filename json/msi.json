@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "msi",
+        "price": 1500,
+        "image": "https://tkcustomcomputer.com/assets/uploads/437d812c8074b5dbb497c965a3ecfaa9.jpg"
+    },
+    {
+        "id": 2,
+        "name": "ASUS ROG G614JU-N3186W",
+        "price": 1500,
+        "image": "https://tkcustomcomputer.com/assets/uploads/437d812c8074b5dbb497c965a3ecfaa9.jpg"
+    },
+    {
+        "id": 3,
+        "name": "ASUS ROG G614JU-N3186W",
+        "price": 1500,
+        "image": "https://tkcustomcomputer.com/assets/uploads/437d812c8074b5dbb497c965a3ecfaa9.jpg"
+    },
+    {
+        "id": 4,
+        "name": "ASUS ROG G614JU-N3186W",
+        "price": 1500,
+        "image": "https://tkcustomcomputer.com/assets/uploads/437d812c8074b5dbb497c965a3ecfaa9.jpg"
+    },
+    {
+        "id": 5,
+        "name": "ASUS ROG G614JU-N3186W",
+        "price": 1500,
+        "image": "https://tkcustomcomputer.com/assets/uploads/437d812c8074b5dbb497c965a3ecfaa9.jpg"
+    }
+]

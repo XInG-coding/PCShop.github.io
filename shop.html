@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Shop</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    
+
+    <link rel="stylesheet" href="Style.css">
+
+    <style>
+
+
+       .products{
+            flex:0 0 260px; 
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            
+       }
+
+        .products img{
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+
+        
+
+
+        #featured > div:nth-child(5) > nav > ul > li>a{
+            font-weight: 15;
+            color: black;
+        }
+
+        #featured > div:nth-child(5) > nav > ul > li:nth-child(n):hover>a{
+            color:white;
+            background-color:rgb(124, 25, 236);
+        }
+
+        .twosite{
+          display: flex;
+          justify-content: end;
+          gap: 	15px;
+          
+        }
+        .twosite img{
+          margin-right: 75%;
+          height: 50px;
+          object-fit: cover;
+        }
+
+        .carousel-arrow{
+          background-color: rgb(89, 5, 247);
+          color: white;
+          border-radius: 50%;
+          height: 50px;
+          
+          
+          
+        }
+        .carousel-arrow:hover{
+          background-color: #6d6969;
+          color: white;
+        }
+
+
+
+        .dropdown{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .dropdown-menu{
+          font-size:0.8rem ;
+        }
+
+        .dropdown-menu{
+          position: absolute;
+          top: 110%;
+          left: 0;
+          width: 200px;
+          max-height: 150px; 
+          overflow-y: auto; 
+          background-color: white;
+          border: 1px solid #ccc;
+          border-radius: 0.5rem;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          display: none; 
+          z-index: 999;
+        }
+
+        h4{
+          font-size: 2rem;
+          color: red;
+        }
+        .detail{
+          text-align: left;
+          color: black;
+        }
+
+        
+        
+    </style>
+
+</head>
+<body>
+
+    <!-- navigation -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 fixed-top">
+        <div class="container">
+          <a href="home.html">
+            <img src="image/logo.png" alt="logo"  >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i id="bar" class="fa-solid fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Contact US</a>
+              </li>
+              <li class="nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </li>
+              <li class="nav-item">
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+            
+          </div>
+        </div>
+      </nav>
+      
+      <!-- featured -->
+      <section id="featured" class="my-5 py-5">
+        <div class="container  mt-3 py-5">
+          <h6>Home/Shop</h6>
+          <div class="dropdown">
+            <h3>All Products</h3>
+            <button class="btn btn-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false"> Brands</button>
+            <ul class="dropdown-menu ">
+              <li><a class="dropdown-item" href="#formList-asus">ASUS</a></li>
+              <li><a class="dropdown-item" href="#formList-zenbook">ZENBOOK</a></li>
+              <li><a class="dropdown-item" href="#formList-tuff">TUF gaming</a></li>
+              <li><a class="dropdown-item" href="#formList-rog">ROG</a></li>
+              <li><a class="dropdown-item" href="#formList-msi">MSI</a></li>
+              <li><a class="dropdown-item" href="#formList-legion">LEGION</a></li>
+            </ul>
+          </div>
+          <hr>
+          <!-- btn-rog -->
+          <div class="twosite ">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand-ROG.png" alt="">
+            <button class="carousel-arrow left" id="prev-rog"><</button>
+            <button class="carousel-arrow right" id="next-rog">></button>
+          </div>
+          <div id="formList-rog" class="formList">
+            <div  id="list" class="listProduct rog mx-auto container" >
+              <div class="products text-center col-lg-3 col-md-4 col-12">
+                <!-- prodcut rog -->   
+              </div>
+            </div>
+          </div>
+          <!-- btn-tuff -->
+          <div class="twosite">
+            <img class=" img-fluid col-lg-2 col-md-4 col-6" src="image/tuff.png" alt="">
+            <button class="carousel-arrow left" id="prev-tuff"><</button>
+            <button class="carousel-arrow right" id="next-tuff">></button>
+          </div>
+          <div id="formList-tuff" class="formList">
+            <div  id="list" class="listProduct tuff mx-auto container" >
+              <div class="products text-center col-lg-3 col-md-4 col-12 ">
+                <!-- prodcut tuff -->   
+              </div>
+            </div>
+          </div>
+          <!-- btn-asus -->
+          <div  class="twosite">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/asus.png" alt="">
+            <button class="carousel-arrow left" id="prev-asus"><</button>
+            <button class="carousel-arrow right" id="next-asus">></button>
+          </div>
+          <div id="formList-asus" class="formList">
+            <div  id="list" class="listProduct asus mx-auto container" >
+              <div class="products text-center col-lg-3 col-md-4 col-12 ">
+                <!-- prodcut asus -->   
+              </div>
+            </div>
+          </div>
+          <!-- btn-zenbook -->
+          <div class="twosite">
+            <img class=" img-fluid col-lg-2 col-md-4 col-6" src="image/brand-zenbook.png" alt="">
+            <button class="carousel-arrow left" id="prev-zenbook"><</button>
+            <button class="carousel-arrow right" id="next-zenbook">></button>
+          </div>
+          <div id="formList-zenbook" class="formList">
+            <div  id="list" class="listProduct zenbook mx-auto container" >
+              <div class="products text-center col-lg-3 col-md-4 col-12 ">
+                <!-- prodcut zenbook -->   
+              </div>
+            </div>
+          </div>
+          <!-- btn-msi -->
+          <div class="twosite">
+            <img class=" img-fluid col-lg-2 col-md-4 col-6" src="image/brand-msi.png" alt="">
+            <button class="carousel-arrow left" id="prev-msi"><</button>
+            <button class="carousel-arrow right" id="next-msi">></button>
+          </div>
+          <div id="formList-msi" class="formList">
+            <div  id="list" class="listProduct msi mx-auto container" >
+              <div class="products text-center col-lg-3 col-md-4 col-12 ">
+                <!-- prodcut msi -->   
+              </div>
+            </div>
+          </div>
+          <!-- btn-legion -->
+          <div class="twosite">
+            <img class=" img-fluid col-lg-2 col-md-4 col-6" src="image/brand-lenovo.png" alt="">
+            <button class="carousel-arrow left" id="prev-legion"><</button>
+            <button class="carousel-arrow right" id="next-legion">></button>
+          </div>
+          <div id="formList-legion" class="formList">
+            <div  id="list" class="listProduct legion mx-auto container" >
+              <div class="products text-center col-lg-3 col-md-4 col-12 ">
+                <!-- prodcut legion -->   
+              </div>
+            </div>
+          </div>
+      </section>
+      <button id="scrollToTop" class="scrollToTop">
+        <i class="fas fa-arrow-up fa-2x"></i>
+      </button>
+      <!-- footer -->
+      <footer class="mt-3 py-3">
+        <div class="row container mx-auto pt-5">
+          <div class="footer-one col-lg-3 col-mb-6 col-12">
+            <img class="pb-1" src="image/logo.png" alt="logo">
+            <p>Discover powerful, reliable PCs built for work, play, and everything in between. Fast, sleek, and affordable—find your perfect match today!</p>
+          </div>
+          <div class="footer-one col-lg-3 col-mb-6 col-12">
+            <h5 class="pd-2">Featured</h5>
+            <ul class="text-uppercase list-unstyled py-3">
+              <li><a href="#">Laptop</a></li> 
+              <li><a href="#">Monitor</a></li>
+              <li><a href="#">Headphones</a></li>
+              <li><a href="#">Keyboards</a></li>
+              <li><a href="#">Mouses</a></li>
+              <li><a href="#">PC sets</a></li>
+            </ul>
+          </div>
+          <div class="footer-one col-lg-3 col-mb-6 col-12">
+            <h5 class="pd-2">Contact US</h5>
+            <div class="py-3">
+              <h6 class="text-uppercase">location :</h6>
+              <p >1 street name, Phnom Penh, cambodia</p>
+              <h6 class="text-uppercase">phone number :</h6>
+              <p>095-501-827</p>
+              <h6 class="text-uppercase">email :</h6>
+              <p >example@gmail.com</p>
+            </div>
+          </div>
+          <div class="footer-one col-lg-3 col-mb-6 col-12">
+            <h5 class="pb-2">Quick links</h5>
+            <ul class="text-uppercase list-unstyled py-2">
+              <li class="mb-2"><a href="#">about</a></li> 
+              <li class="mb-2"><a href="#">contact</a></li>
+              <li class="mb-2"><a href="#">faqs</a></li>
+              <li class="mb-2"><a href="#">help</a></li>
+              <li class="mb-2"><a href="#">privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright mt-5">
+          <div class="row container mx-auto">
+            <div class="col-lg-3 col-md-6 col-12 mb-2 mx-3">
+              <img src="image/paper-webshop.png" alt="paper-webshop">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-2">
+              <p>PC SHOP eCommerce © 2025. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-messenger"></i></i></i></a>
+              <a href="#"><i class="fa-brands fa-twitch"></i></i></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </footer>
+      
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" 
+      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" 
+      crossorigin="anonymous"></script>
+      <script src="scripts.js"></script>
+    </body>
+</html>
